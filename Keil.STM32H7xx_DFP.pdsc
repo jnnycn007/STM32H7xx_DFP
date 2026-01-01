@@ -1546,7 +1546,7 @@ High-performance STM32H7 MCUs with Arm Cortex-M7 and Arm Cortex-M4 cores, MPU, L
         <memory Pname="CM7" name="RAM_D3"   access="rw"             start="0x38000000" size="0x00010000" default="1" init="0"/>
      <!--memory Pname="CM7" name="ITCMRAM"  access="rw"             start="0x00000000" size="0x00010000" default="1" init="0"/-->
 
-        <memory Pname="CM4" name="RAM_D2"   access="rw"             start="0x10000000" size="0x00030000" default="1" init="0"/>
+        <memory Pname="CM4" name="RAM_D2"   access="rw"             start="0x10000000" size="0x00040000" default="1" init="0"/>
         <memory Pname="CM4" name="RAM_D2S3" access="rw"             start="0x10040000" size="0x00008000" default="1" init="0"/>
 
         <!-- *************************  Device 'STM32H755BITx'  ***************************** -->
@@ -1883,7 +1883,7 @@ High-performance STM32H7 MCUs with Arm Cortex-M7 and Arm Cortex-M4 cores, MPU, L
         <memory Pname="CM7" name="RAM_D3"   access="rw"             start="0x38000000" size="0x00010000" default="1" init="0"/>
      <!--memory Pname="CM7" name="ITCMRAM"  access="rw"             start="0x00000000" size="0x00010000" default="1" init="0"/-->
 
-        <memory Pname="CM4" name="RAM_D2"   access="rw"             start="0x10000000" size="0x00030000" default="1" init="0"/>
+        <memory Pname="CM4" name="RAM_D2"   access="rw"             start="0x10000000" size="0x00040000" default="1" init="0"/>
         <memory Pname="CM4" name="RAM_D2S3" access="rw"             start="0x10040000" size="0x00008000" default="1" init="0"/>
 
         <!-- *************************  Device 'STM32H757AIIx'  ***************************** -->
