@@ -3348,7 +3348,7 @@ High-performance STM32H7 MCUs with Arm Cortex-M7 and Arm Cortex-M4 cores, MPU, L
 
         <!-- *************************  Device 'STM32H730IBTxQ'  ***************************** -->
         <device Dname="STM32H730IBTxQ">
-          <compile define="stm32h730xxq"/>
+          <compile define="STM32H730xxQ"/>
 
           <memory name="FLASH_Bank1" access="rx" start="0x08000000" size="0x00020000" default="1" startup="1"/>
 
