@@ -16,6 +16,8 @@
   <releases>
     <release version="4.1.4-dev">
       Active development ...
+      Package Description:
+      - Added templates conditions (to filter single-core or dual-core devices)
     </release>
     <release version="3.1.1" date="2023-07-04">
       Board Support:
@@ -3406,6 +3408,34 @@ High-performance STM32H7 MCUs with Arm Cortex-M7 and Arm Cortex-M4 cores, MPU, L
       <deny    Dvendor="STMicroelectronics:13" Dname="STM32H7[S]*"/>
     </condition>
 
+    <!-- Device Conditions (single-core)-->
+    <condition id="STM32H7 SingleCore">
+      <description>STMicroelectronics STM32H7 single-core Cortex-M7 devices</description>
+      <require condition="STM32H7"/>
+      <accept Dname="STM32H723*"/>
+      <accept Dname="STM32H725*"/>
+      <accept Dname="STM32H730*"/>
+      <accept Dname="STM32H733*"/>
+      <accept Dname="STM32H735*"/>
+      <accept Dname="STM32H742*"/>
+      <accept Dname="STM32H743*"/>
+      <accept Dname="STM32H750*"/>
+      <accept Dname="STM32H753*"/>
+      <accept Dname="STM32H7A3*"/>
+      <accept Dname="STM32H7B0*"/>
+      <accept Dname="STM32H7B3*"/>
+    </condition>
+
+    <!-- Device Conditions (Dual core)-->
+    <condition id="STM32H7 DualCore">
+      <description>STMicroelectronics STM32H7 dual-core devices with Cortex-M7 and Cortex-M4</description>
+      <require condition="STM32H7"/>
+      <accept Dname="STM32H745*"/>
+      <accept Dname="STM32H747*"/>
+      <accept Dname="STM32H755*"/>
+      <accept Dname="STM32H757*"/>
+    </condition>
+
     <!-- Device + CMSIS Conditions -->
     <condition id="STM32H7 CMSIS">
       <description>STMicroelectronics STM32H7 Device and CMSIS-CORE</description>
@@ -3431,11 +3461,11 @@ High-performance STM32H7 MCUs with Arm Cortex-M7 and Arm Cortex-M4 cores, MPU, L
 
   <csolution>
     <!-- CubeMX Basic CMSIS Solution template -->
-    <template name="CubeMX Basic solution" path="Templates/CubeMX" file="CubeMX.csolution.yml" condition="STM32H7">
+    <template name="CubeMX Basic solution" path="Templates/CubeMX" file="CubeMX.csolution.yml" condition="STM32H7 SingleCore">
       <description>Create a CubeMX basic solution with project</description>
     </template>
     <!-- CubeMX Dual Core CMSIS Solution template -->
-    <template name="CubeMX Dual Core solution" path="Templates/CubeMX_DualCore" file="CubeMX_DualCore.csolution.yml" condition="STM32H7">
+    <template name="CubeMX Dual Core solution" path="Templates/CubeMX_DualCore" file="CubeMX_DualCore.csolution.yml" condition="STM32H7 DualCore">
       <description>Create a CubeMX Dual Core solution with CM4 and CM7 projects</description>
     </template>
   </csolution>
